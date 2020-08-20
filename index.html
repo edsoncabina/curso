@@ -17,24 +17,14 @@
         <div ng-controller="mainController">
             <h1>Arquivo do Git</h1>
         </div>
-        <form name="myForm">
-            <label>
-                Enter text:
-                <input type="email" ng-model="field" name="myField" required maxlength="15" minlength="5" />
-            </label>
-            <div ng-messages="myForm.myField.$error" role="alert">
-                <div class="alert alert-warning" ng-message="required">Please enter a value for this field.</div>
-                <div class="alert alert-warning" ng-message="email">This field must be a valid email address.</div>
-                <div class="alert alert-warning" ng-message="maxlength">This field can be at most 15 characters long.</div>
-                <div class="alert alert-warning" ng-message="minlength">O email está muito curto.</div>
 
-            </div>
-        </form>
     </div>
 
     <!--Include Angular Js 1.5-->
     <script src="lib/angular/angular.min.js"></script>
     <script src="lib/angular/angular-messages.min.js"></script>
+    <script src="lib/angular/angular-route.min.js"></script>
+    <script src="lib/angular/angular-resource.min.js"></script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
