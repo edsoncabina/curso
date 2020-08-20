@@ -1,12 +1,23 @@
-var myApp = angular.module('myApp',[]);
+var myApp = angular.module('myApp',['ngMessages']);
 
-myApp.controller("mainController",function($scope){
-    $scope.name = "Edson";
-    $scope.ocupacao ="Desenvolvedor";
-    $scope.getNome = function (){
-        return "Edson Cabina";
-    };
+myApp.controller("mainController",function($scope,$log,$filter){
     
-    console.log($scope);
+    /**
+     //$log= metodo semelhante ao console do js
+     $log.log("Olá");
+    $log.info("Informação");
+    $log.warn("Aviso");
+    $log.debug("Debug");
+    $log.error("Erro");;
+     */
+    $scope.nome = "Edson";
+    $scope.nomeFormatado = $filter('uppercase')($scope.nome);
 
+    $log.info($scope.nome);
+    $log.info($scope.nomeFormatado);
+
+
+
+    
+    //console.log($log);
 });
